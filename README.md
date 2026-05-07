@@ -1,5 +1,9 @@
 # x-post-reply
 
+[![Version](https://img.shields.io/badge/version-1.0.0-blueviolet)](https://github.com/chuong1224/x-post-reply)
+[![Grok Skill](https://img.shields.io/badge/Grok-Custom_Skill-9B59B6)](https://github.com/chuong1224/x-post-reply)
+[![GitHub Repo stars](https://img.shields.io/github/stars/chuong1224/x-post-reply?style=social)](https://github.com/chuong1224/x-post-reply/stargazers)
+
 **Grok Skill** for generating short, natural, personalized replies to X (Twitter) posts and comments.
 
 ## Overview
