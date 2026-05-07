@@ -1,8 +1,10 @@
 # x-post-reply
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blueviolet)](https://github.com/chuong1224/x-post-reply)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/chuong1224/x-post-reply/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/chuong1224/x-post-reply)](https://github.com/chuong1224/x-post-reply/commits/main)
 [![Grok Skill](https://img.shields.io/badge/Grok-Custom_Skill-9B59B6)](https://github.com/chuong1224/x-post-reply)
-[![GitHub Repo stars](https://img.shields.io/github/stars/chuong1224/x-post-reply?style=social)](https://github.com/chuong1224/x-post-reply/stargazers)
+[![Stars](https://img.shields.io/github/stars/chuong1224/x-post-reply?style=social)](https://github.com/chuong1224/x-post-reply/stargazers)
 
 **Grok Skill** for generating short, natural, personalized replies to X (Twitter) posts and comments.
 
@@ -22,6 +24,7 @@ Create concise replies (1-2 sentences, under 25 words), friendly, matching the t
 
 - `SKILL.md` — Full skill specification: classification workflow (5 types: Milestone, Art+Question, Greeting, Compliment, Thank You), templates, specificity rules, emoji guide, gotchas, and real examples.
 - `README.md` — This file.
+- `LICENSE` — MIT License
 
 ## How to Use
 
