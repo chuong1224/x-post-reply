@@ -1,10 +1,10 @@
 # x-post-reply
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blueviolet)](https://github.com/chuong1224/x-post-reply)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/chuong1224/x-post-reply/blob/main/LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/chuong1224/x-post-reply)](https://github.com/chuong1224/x-post-reply/commits/main)
+[![License](https://img.shields.io/github/license/chuong1224/x-post-reply)](https://github.com/chuong1224/x-post-reply/blob/main/LICENSE)
 [![Grok Skill](https://img.shields.io/badge/Grok-Custom_Skill-9B59B6)](https://github.com/chuong1224/x-post-reply)
-[![Stars](https://img.shields.io/github/stars/chuong1224/x-post-reply?style=social)](https://github.com/chuong1224/x-post-reply/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/chuong1224/x-post-reply)](https://github.com/chuong1224/x-post-reply/commits/main)
+[![GitHub Repo stars](https://img.shields.io/github/stars/chuong1224/x-post-reply?style=social)](https://github.com/chuong1224/x-post-reply/stargazers)
 
 **Grok Skill** for generating short, natural, personalized replies to X (Twitter) posts and comments.
 
@@ -51,6 +51,6 @@ See `SKILL.md` for detailed examples:
 
 ---
 
-*Skill version: 1.0.0*  |  Repo: https://github.com/chuong1224/x-post-reply
+*Skill version: 1.0.0*  |  Repo: https://github.com/chuong1224/x-post-reply  |  Licensed under [MIT](LICENSE)
 
 Created for custom Grok use — fork, adapt, and improve!
