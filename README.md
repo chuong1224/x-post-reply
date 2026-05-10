@@ -1,12 +1,12 @@
 # x-post-reply
 
-[![Version](https://img.shields.io/badge/version-1.1.0-blueviolet)](https://github.com/chuong1224/x-post-reply)
-[![License](https://img.shields.io/github/license/chuong1224/x-post-reply)](https://github.com/chuong1224/x-post-reply/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/version-2.0.0-blueviolet)](https://github.com/chuong1224/x-post-reply)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/chuong1224/x-post-reply/blob/main/LICENSE)
 [![Grok Skill](https://img.shields.io/badge/Grok-Custom_Skill-9B59B6)](https://github.com/chuong1224/x-post-reply)
 [![Last Commit](https://img.shields.io/github/last-commit/chuong1224/x-post-reply)](https://github.com/chuong1224/x-post-reply/commits/main)
 [![GitHub Repo stars](https://img.shields.io/github/stars/chuong1224/x-post-reply?style=social)](https://github.com/chuong1224/x-post-reply/stargazers)
 
-**Grok Skill** for generating short, natural, personalized replies to X (Twitter) posts and comments.
+**Grok Skill v2.0.0** — Context-aware tool for generating natural, personalized replies to X (Twitter) posts and comments. Analyzes post type, context, and crafts concise, engaging responses ready to copy-paste.
 
 ---
 
@@ -14,52 +14,36 @@
 
 ### Overview
 
-This skill activates when you want to reply to a post on X, reply to comments, or engage with social media posts. Trigger phrases include: “viet reply cho post nay”, “reply to this post”, “help me reply”, “draft reply”, etc.
+This skill activates whenever you want to reply to a post or comment on X. It automatically classifies the post type (Main Post vs Reply-to-Reply), identifies context (art, milestone, greeting, etc.), and generates **exactly one** ready-to-use reply text following strict rules: max 2 sentences, under 25 words ideal, mentions one specific detail from the original post, matches tone, and ends positively.
 
-Just paste the post content and say “viet reply” or similar — the skill automatically analyzes and outputs a ready-to-post reply.
+**Trigger examples:** “viet reply cho post nay”, “reply to this post”, “help me reply”, “draft reply”, “tra loi tweet”
 
-**Not triggered** for general X knowledge questions, new caption requests, or without a specific post pasted.
+**Not triggered** for general X knowledge questions, caption writing requests, or when no specific post content is provided.
 
-### Purpose
+### Key Features
+- Strict output: **only** the reply text (no explanations, no “Here’s a reply:”)
+- Context-aware templates for Art, Questions, Milestones, Greetings, Acknowledgments, Thank-yous
+- Always references **one specific detail** from the original post
+- Smart classification: Main Post vs Reply-to-Reply
+- Handles edge cases (short posts, multiple posts, non-English, etc.)
+- Optimized for high engagement: emotional hooks, questions, positive close
 
-Create concise replies (1-2 sentences, under 25 words), friendly, matching the tone of the X post — mainly for AI art, milestones, greetings, engagement questions. Results feel natural, personal, and non-generic.
-
-### Repository Contents
-
-- `SKILL.md` — Full skill specification (v1.1.0): classification workflow (5 types), templates, specificity rules, emoji guide, gotchas, and real examples.
-- `README.md` — This file (bilingual).
-- `LICENSE` — MIT License
-
-### How to Use
-
-1. In Grok chat, paste a post/comment from X.
-2. Say one of the trigger phrases like “viet reply cho post nay”, “reply to this post”, or “help me reply”.
-3. Get a ready-to-copy reply (or request 2-3 variants).
+### Workflow Summary
+1. Detect input type (direct paste / URL / no content)
+2. Classify as Main Post or Reply-to-Reply
+3. Identify context type (Art Appreciation, Direct Engagement, Milestone Warmth, etc.)
+4. Generate reply using matching template + specific detail + 1-2 emojis
+5. Trim to 1-2 short sentences
 
 ### Examples
-
-See `SKILL.md` for detailed examples:
-- Milestone replies (follower counts)
-- Art posts with engagement questions
-- Morning / Greeting messages
-- Simple compliments
-- Thank you replies
+See `SKILL.md` for detailed real-world examples with input → classified type → output reply.
 
 ### Gotchas & Best Practices
-
-- Always include **1 specific detail** from the original post.
-- Keep replies **under 25 words**.
-- End with a **forward-looking phrase**.
-- Use **max 2 emojis**, tone-appropriate.
-- For Vietnamese posts, reply in English unless Vietnamese is specifically requested.
-- YAML frontmatter: Use `>-` for multi-line description to avoid parsing errors.
-
-### Version History
-
-| Version | Date       | Changes                                      |
-|---------|------------|----------------------------------------------|
-| 1.1.0   | 2026-05-08 | Improved YAML frontmatter handling + new gotcha about description formatting |
-| 1.0.0   | 2026-05-07 | Initial release with full workflow, 5-type classification, templates, gotchas, and examples |
+- Always mention **1 specific detail** (never generic “Nice post!”)
+- Keep very short (ideal <25 words, max 2 sentences)
+- Match emotional tone and use appropriate emojis (1-2 max)
+- For Vietnamese posts: reply in English unless user specifies otherwise
+- Output **only** raw reply text
 
 ---
 
@@ -67,50 +51,39 @@ See `SKILL.md` for detailed examples:
 
 ### Tổng quan
 
-Skill này được kích hoạt khi bạn muốn viết reply cho bài đăng trên X, trả lời comment, hoặc tương tác với các bài đăng mạng xã hội. Các cụm từ kích hoạt bao gồm: “viet reply cho post nay”, “reply to this post”, “help me reply”, v.v.
+Skill này được kích hoạt khi bạn muốn viết reply cho bài đăng hoặc comment trên X. Nó tự động phân loại loại post (Main Post hay Reply-to-Reply), xác định ngữ cảnh (art, milestone, greeting...), và tạo **chính xác 1** câu reply sẵn sàng copy-paste, tuân thủ quy tắc nghiêm ngặt: tối đa 2 câu, lý tưởng dưới 25 từ, nhắc 1 chi tiết cụ thể từ post gốc, phù hợp tone, kết thúc tích cực.
 
-Chỉ cần paste nội dung post rồi nói “viet reply” — skill sẽ tự động phân tích và xuất ra reply sẵn sàng đăng.
+**Các cụm từ kích hoạt:** “viet reply cho post nay”, “reply to this post”, “help me reply”, “draft reply”, “tra loi tweet”
 
-**Không kích hoạt** khi chỉ hỏi kiến thức chung về X hoặc yêu cầu viết caption mới.
+**Không kích hoạt** khi chỉ hỏi kiến thức về X, yêu cầu viết caption, hoặc không có nội dung post cụ thể.
 
-### Mục đích
+### Tính năng chính
+- Output nghiêm ngặt: **chỉ** text reply (không giải thích, không “Here’s a reply:”)
+- Template theo ngữ cảnh: Art, Question, Milestone, Greeting, Acknowledgment, Thank you
+- Luôn nhắc **1 chi tiết cụ thể** từ post gốc
+- Phân loại thông minh: Main Post vs Reply-to-Reply
+- Xử lý các tình huống biên (post ngắn, nhiều post, post tiếng Việt...)
+- Tối đạ đấu tương tác: hook cảm xúc, câu hỏi, kết thúc tích cực
 
-Tạo các câu reply ngắn gọn (1-2 câu, dưới 25 từ), than thiện, phù hợp tone bài đăng trên X — chủ yếu cho AI art, milestone, lời chào, câu hỏi tương tác. Kết quả tự nhiên, có tính cá nhân.
-
-### Nội dung Repository
-
-- `SKILL.md` — Định nghĩa đầy đủ của skill (v1.1.0)
-- `README.md` — File này (song ngữ)
-- `LICENSE` — Giấy phép MIT
-
-### Cách sử dụng
-
-1. Paste bài đăng/comment từ X vào Grok.
-2. Nói các cụm từ kích hoạt như “viet reply cho post nay”.
-3. Nhận reply sẵn sàng copy (hoặc yêu cầu 2-3 biến thể).
+### Tóm tắt Workflow
+1. Nhận diện loại input (paste trực tiếp / URL / không có nội dung)
+2. Phân loại Main Post hay Reply-to-Reply
+3. Xác định context type (Art Appreciation, Direct Engagement, Milestone Warmth...)
+4. Tạo reply theo template phù hợp + chi tiết cụ thể + 1-2 emoji
+5. Cắt ngắn còn 1-2 câu
 
 ### Ví dụ
-
-Xem `SKILL.md` để có các ví dụ chi tiết.
+Xem `SKILL.md` để có các ví dụ thực tế chi tiết với Input → Loại → Output reply.
 
 ### Lưu ý quan trọng
-
-- Luôn chèn **1 chi tiết cụ thể** từ post gốc.
-- Giới hạn dưới **25 từ**.
-- Kết thúc bằng câu mang tính tiếp nối.
-- Tối đa **2 emoji**.
-- Với post tiếng Việt: reply bằng tiếng Anh (trừ khi được yêu cầu).
-- YAML frontmatter: Dùng `>-` cho description nhiều dòng.
-
-### Lịch sử phiên bản
-
-| Phiên bản | Ngày       | Thay đổi                                      |
-|---------------|-------------|--------------------------------------------------|
-| 1.1.0         | 2026-05-08  | Cải thiện xử lý YAML frontmatter + thêm gotcha mới |
-| 1.0.0         | 2026-05-07  | Phát hành đầu tiên                                |
+- Luôn nhắc **1 chi tiết cụ thể** (không dùng “Nice post!” chung chung)
+- Giữ rất ngắn (lý tưởng <25 từ, tối đa 2 câu)
+- Phù hợp tone cảm xúc và dùng emoji thích hợp (1-2 cái)
+- Post tiếng Việt: reply tiếng Anh trừ khi user yêu cầu khác
+- Output **chỉ** raw reply text
 
 ---
 
-*Skill version: 1.1.0*  |  Repo: https://github.com/chuong1224/x-post-reply  |  Licensed under [MIT](LICENSE)
+*Skill version: 2.0.0*  |  Repo: https://github.com/chuong1224/x-post-reply  |  Licensed under [MIT](LICENSE)
 
-Tạo bởi N0v4Ph4n cho Grok users
+Created for Grok users who want fast, high-quality, on-brand replies on X.
